@@ -1,0 +1,239 @@
+/* ==========================================================================
+   FLUID BLOB BACKGROUND ANIMATION (.fx-stage, .fx-blob-1, .fx-blob-2)
+   Adapted for English Communication Coach Atmospheric Visual Environment
+   ========================================================================== */
+
+.fx-stage,
+.ec-fluid-stage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  contain: strict;
+  will-change: transform, opacity;
+}
+
+/* Base Blob Styling */
+.fx-blob,
+.ec-fluid-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(95px);
+  -webkit-filter: blur(95px);
+  will-change: transform, opacity, border-radius;
+  pointer-events: none;
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  transform: translate3d(var(--mouse-tx, 0px), var(--mouse-ty, 0px), 0);
+  transition: transform 0.15s linear;
+}
+
+/* --------------------------------------------------------------------------
+   PRIMARY FLUID BLOB (.fx-blob-1)
+   Positioned in the upper-right / central visual field where resonance waves flow
+   -------------------------------------------------------------------------- */
+.fx-blob-1,
+.ec-fluid-blob-primary {
+  top: 15%;
+  right: 8%;
+  width: clamp(380px, 48vw, 700px);
+  height: clamp(380px, 48vw, 700px);
+  background: radial-gradient(
+    circle at 45% 45%,
+    rgba(255, 75, 38, 0.65) 0%,
+    rgba(255, 120, 50, 0.42) 40%,
+    rgba(220, 60, 30, 0.2) 70%,
+    transparent 100%
+  );
+  animation: fxBlobMorph1 24s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate,
+             fxBlobPulse1 14s ease-in-out infinite alternate;
+}
+
+/* --------------------------------------------------------------------------
+   SECONDARY FLUID BLOB (.fx-blob-2)
+   Positioned lower-left / center-bottom providing warm counterbalance & depth
+   -------------------------------------------------------------------------- */
+.fx-blob-2,
+.ec-fluid-blob-secondary {
+  bottom: 8%;
+  left: 12%;
+  width: clamp(340px, 42vw, 620px);
+  height: clamp(340px, 42vw, 620px);
+  filter: blur(105px);
+  -webkit-filter: blur(105px);
+  opacity: 0.48;
+  background: radial-gradient(
+    circle at 55% 55%,
+    rgba(255, 60, 30, 0.55) 0%,
+    rgba(200, 45, 25, 0.38) 45%,
+    rgba(160, 30, 20, 0.18) 75%,
+    transparent 100%
+  );
+  animation: fxBlobMorph2 30s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate,
+             fxBlobPulse2 18s ease-in-out infinite alternate;
+}
+
+/* --------------------------------------------------------------------------
+   SUBTLE LUMINOUS CORE NODE (.fx-blob-core)
+   Ties the fluid blobs to the center-right focal area
+   -------------------------------------------------------------------------- */
+.fx-blob-core,
+.ec-fluid-blob-core {
+  position: absolute;
+  top: 40%;
+  right: 25%;
+  width: clamp(220px, 25vw, 360px);
+  height: clamp(220px, 25vw, 360px);
+  border-radius: 50%;
+  filter: blur(75px);
+  -webkit-filter: blur(75px);
+  opacity: 0.38;
+  background: radial-gradient(
+    circle,
+    rgba(255, 125, 60, 0.5) 0%,
+    rgba(255, 75, 38, 0.25) 50%,
+    transparent 80%
+  );
+  animation: fxBlobCorePulse 10s ease-in-out infinite alternate;
+}
+
+/* --------------------------------------------------------------------------
+   ORGANIC FLUID MORPHING KEYFRAMES
+   Continuous border-radius, scale, and organic translation without layout jump
+   -------------------------------------------------------------------------- */
+@keyframes fxBlobMorph1 {
+  0% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(var(--mouse-tx, 0px), var(--mouse-ty, 0px), 0) scale(1) rotate(0deg);
+  }
+  25% {
+    border-radius: 55% 45% 38% 62% / 58% 32% 68% 42%;
+    transform: translate3d(calc(var(--mouse-tx, 0px) + 30px), calc(var(--mouse-ty, 0px) - 20px), 0) scale(1.08) rotate(45deg);
+  }
+  50% {
+    border-radius: 35% 65% 60% 40% / 42% 58% 42% 58%;
+    transform: translate3d(calc(var(--mouse-tx, 0px) - 20px), calc(var(--mouse-ty, 0px) + 35px), 0) scale(0.96) rotate(90deg);
+  }
+  75% {
+    border-radius: 62% 38% 48% 52% / 35% 65% 35% 65%;
+    transform: translate3d(calc(var(--mouse-tx, 0px) + 15px), calc(var(--mouse-ty, 0px) + 10px), 0) scale(1.05) rotate(135deg);
+  }
+  100% {
+    border-radius: 48% 52% 65% 35% / 52% 48% 52% 48%;
+    transform: translate3d(calc(var(--mouse-tx, 0px) - 10px), calc(var(--mouse-ty, 0px) - 15px), 0) scale(1.02) rotate(180deg);
+  }
+}
+
+@keyframes fxBlobMorph2 {
+  0% {
+    border-radius: 50% 50% 35% 65% / 55% 45% 55% 45%;
+    transform: translate3d(var(--mouse-tx, 0px), var(--mouse-ty, 0px), 0) scale(1) rotate(0deg);
+  }
+  33% {
+    border-radius: 65% 35% 58% 42% / 42% 60% 40% 58%;
+    transform: translate3d(calc(var(--mouse-tx, 0px) - 35px), calc(var(--mouse-ty, 0px) + 15px), 0) scale(1.06) rotate(-40deg);
+  }
+  66% {
+    border-radius: 40% 60% 45% 55% / 60% 38% 62% 40%;
+    transform: translate3d(calc(var(--mouse-tx, 0px) + 25px), calc(var(--mouse-ty, 0px) - 25px), 0) scale(0.94) rotate(-85deg);
+  }
+  100% {
+    border-radius: 58% 42% 52% 48% / 48% 52% 48% 52%;
+    transform: translate3d(calc(var(--mouse-tx, 0px) - 15px), calc(var(--mouse-ty, 0px) - 10px), 0) scale(1.03) rotate(-130deg);
+  }
+}
+
+@keyframes fxBlobPulse1 {
+  0% { opacity: 0.48; }
+  50% { opacity: 0.62; }
+  100% { opacity: 0.52; }
+}
+
+@keyframes fxBlobPulse2 {
+  0% { opacity: 0.42; }
+  50% { opacity: 0.56; }
+  100% { opacity: 0.46; }
+}
+
+@keyframes fxBlobCorePulse {
+  0% { opacity: 0.3; transform: scale(0.92); }
+  50% { opacity: 0.46; transform: scale(1.1); }
+  100% { opacity: 0.35; transform: scale(0.98); }
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .fx-blob-1,
+  .ec-fluid-blob-primary {
+    top: 10%;
+    right: 0%;
+    width: clamp(320px, 55vw, 550px);
+    height: clamp(320px, 55vw, 550px);
+    filter: blur(80px);
+    -webkit-filter: blur(80px);
+  }
+
+  .fx-blob-2,
+  .ec-fluid-blob-secondary {
+    bottom: 5%;
+    left: 5%;
+    width: clamp(280px, 48vw, 480px);
+    height: clamp(280px, 48vw, 480px);
+    filter: blur(85px);
+    -webkit-filter: blur(85px);
+  }
+}
+
+@media (max-width: 768px) {
+  .fx-blob,
+  .ec-fluid-blob {
+    opacity: 0.45;
+  }
+
+  .fx-blob-1,
+  .ec-fluid-blob-primary {
+    top: 5%;
+    right: -10%;
+    width: 320px;
+    height: 320px;
+    filter: blur(65px);
+    -webkit-filter: blur(65px);
+  }
+
+  .fx-blob-2,
+  .ec-fluid-blob-secondary {
+    bottom: 0%;
+    left: -10%;
+    width: 280px;
+    height: 280px;
+    filter: blur(70px);
+    -webkit-filter: blur(70px);
+  }
+
+  .fx-blob-core,
+  .ec-fluid-blob-core {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   ACCESSIBILITY: PREFERS-REDUCED-MOTION
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .fx-blob-1,
+  .ec-fluid-blob-primary,
+  .fx-blob-2,
+  .ec-fluid-blob-secondary,
+  .fx-blob-core,
+  .ec-fluid-blob-core {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 0.4 !important;
+  }
+}

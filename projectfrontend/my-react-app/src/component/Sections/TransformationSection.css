@@ -1,0 +1,511 @@
+/* ==========================================================================
+   TRANSFORMATION SECTION - BEFORE VS AFTER COMPARATIVE STORYTELLING
+   ========================================================================== */
+
+.transformation-section {
+  position: relative;
+  background-color: #070707;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.transformation-header {
+  margin-bottom: 64px;
+}
+
+.transformation-intro {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #adaba5;
+  max-width: 680px;
+  margin-top: 16px;
+  margin-bottom: 36px;
+}
+
+/* Tabs Pill Switcher */
+.transformation-tabs-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.trans-tab-btn {
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #adaba5;
+  background: transparent;
+  border: none;
+  border-radius: 9999px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trans-tab-btn:hover {
+  color: var(--white-color);
+}
+
+.trans-tab-btn.is-active {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  box-shadow: 0 4px 16px rgba(255, 75, 38, 0.35);
+}
+
+/* ---------------- Student Success Stories Grid ---------------- */
+.student-cards-section {
+  margin-bottom: 84px;
+}
+
+.student-cards-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.student-cards-subheading {
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #adaba5;
+}
+
+.student-cards-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--orange-color);
+}
+
+.student-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.student-story-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.student-story-card:hover {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(255, 75, 38, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.story-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.story-user-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.story-avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1e1d1b;
+  border: 1px solid rgba(255, 75, 38, 0.3);
+  color: var(--orange-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.story-name {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white-color);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.story-location {
+  display: block;
+  font-size: 0.78rem;
+  color: #adaba5;
+  margin-top: 2px;
+}
+
+.story-badge-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: rgba(255, 75, 38, 0.12);
+  border: 1px solid rgba(255, 75, 38, 0.3);
+  color: var(--orange-color);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.story-journey-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.story-phase {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.phase-header-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phase-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.phase-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.label-before {
+  color: #ff7b7b;
+}
+
+.label-after {
+  color: #34d399;
+}
+
+.dot-before {
+  background-color: #ff5252;
+  box-shadow: 0 0 6px rgba(255, 82, 82, 0.5);
+}
+
+.dot-after {
+  background-color: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
+}
+
+.phase-text {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: #d1cfc7;
+  margin: 0;
+}
+
+.story-quote {
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: #adaba5;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ---------------- Matrix Lead Bar ---------------- */
+.matrix-lead-bar {
+  margin-bottom: 24px;
+}
+
+.matrix-title {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white-color);
+  margin: 0 0 6px 0;
+}
+
+.matrix-sub {
+  font-size: 0.92rem;
+  color: #adaba5;
+}
+
+/* ---------------- Comparative Matrix ---------------- */
+.transformation-matrix {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.015);
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.matrix-columns-header {
+  display: grid;
+  padding: 20px 32px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.transformation-matrix.view-both .matrix-columns-header {
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 32px;
+}
+
+.transformation-matrix.view-before .matrix-columns-header,
+.transformation-matrix.view-after .matrix-columns-header {
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+}
+
+.col-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #adaba5;
+}
+
+.col-head.head-before {
+  color: #ff8585;
+}
+
+.col-head.head-after {
+  color: var(--orange-color);
+}
+
+.head-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.dot-before {
+  background-color: #ff6b6b;
+}
+
+.dot-after {
+  background-color: var(--orange-color);
+  box-shadow: 0 0 8px var(--orange-color);
+}
+
+/* Rows */
+.matrix-rows-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.comparison-row {
+  display: grid;
+  padding: 28px 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background-color 0.3s ease;
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-row:hover {
+  background-color: rgba(255, 255, 255, 0.025);
+}
+
+.transformation-matrix.view-both .comparison-row {
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 32px;
+}
+
+.transformation-matrix.view-before .comparison-row,
+.transformation-matrix.view-after .comparison-row {
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+}
+
+.comp-category-cell {
+  display: flex;
+  align-items: flex-start;
+}
+
+.category-title {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white-color);
+  letter-spacing: -0.01em;
+}
+
+.comp-content-cell {
+  position: relative;
+}
+
+.cell-mobile-tag {
+  display: none;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.comp-text {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.cell-before .comp-text {
+  color: #a8a6a0;
+}
+
+.cell-after .comp-text {
+  color: #f0eee8;
+  font-weight: 500;
+}
+
+/* ---------------- Monumental Metrics Grid ---------------- */
+.transformation-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.metric-card {
+  padding: 36px 28px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.metric-card:hover {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(255, 75, 38, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.metric-number-val {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--white-color);
+  letter-spacing: -0.03em;
+}
+
+.metric-card:first-child .metric-number-val {
+  color: var(--orange-color);
+}
+
+.metric-primary-label {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--white-color);
+  line-height: 1.35;
+}
+
+.metric-sub-caption {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #adaba5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .student-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .transformation-matrix.view-both .matrix-columns-header,
+  .transformation-matrix.view-both .comparison-row {
+    grid-template-columns: 140px 1fr 1fr;
+    gap: 20px;
+    padding: 20px 20px;
+  }
+
+  .transformation-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .student-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transformation-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .transformation-tabs-pill {
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+
+  .trans-tab-btn {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  .matrix-columns-header {
+    display: none;
+  }
+
+  .transformation-matrix.view-both .comparison-row,
+  .transformation-matrix.view-before .comparison-row,
+  .transformation-matrix.view-after .comparison-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px 16px;
+  }
+
+  .cell-mobile-tag {
+    display: inline-block;
+  }
+
+  .tag-before {
+    color: #ff6b6b;
+  }
+
+  .tag-after {
+    color: var(--orange-color);
+  }
+
+  .transformation-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

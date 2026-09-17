@@ -1,0 +1,119 @@
+/* ==========================================================================
+   COACH SECTION STYLES
+   ========================================================================== */
+
+.coach-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.coach-image-frame {
+  aspect-ratio: 4 / 5.2;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.coach-credentials-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  right: 20px;
+  background: rgba(14, 14, 14, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.badge-pin {
+  color: var(--orange-color);
+  font-size: 0.85rem;
+}
+
+.coach-headline {
+  margin-bottom: 28px;
+}
+
+.coach-bio-lead {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #e2e0d8;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.coach-bio-body {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #9c9a94;
+  margin-bottom: 20px;
+}
+
+.coach-signature-box {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--orange-color);
+  border-radius: 0 16px 16px 0;
+  padding: 24px 28px;
+  margin: 32px 0;
+}
+
+.coach-quote {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.signature-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.coach-sign-name {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--orange-color);
+  letter-spacing: 0.02em;
+}
+
+.coach-sign-title {
+  font-size: 0.76rem;
+  color: #888;
+}
+
+.coach-pillars-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pillar-pill {
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #adaba5;
+}
+
+@media (max-width: 960px) {
+  .coach-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

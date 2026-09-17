@@ -1,0 +1,147 @@
+/* ==========================================================================
+   COMMON ENGLISH PROBLEMS SECTION - INDIAN LEARNER EMPATHY
+   ========================================================================== */
+
+.common-problems-section {
+  position: relative;
+  background-color: #070707;
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.problems-header {
+  margin-bottom: 56px;
+  max-width: 820px;
+}
+
+.problems-intro {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #adaba5;
+  margin-top: 16px;
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.problem-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 75, 38, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.problem-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.problem-index-badge {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--orange-color);
+  background: rgba(255, 75, 38, 0.1);
+  border: 1px solid rgba(255, 75, 38, 0.25);
+  padding: 4px 10px;
+  border-radius: 9999px;
+}
+
+.problem-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8c8a84;
+}
+
+.problem-statement {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.problem-detail {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #adaba5;
+  margin: 0;
+}
+
+.problem-card-footer {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.problem-empathy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  color: #adaba5;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.problem-empathy-btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 75, 38, 0.4);
+  background: rgba(255, 75, 38, 0.08);
+}
+
+.problem-empathy-btn.is-selected {
+  background: rgba(255, 75, 38, 0.16);
+  border-color: var(--orange-color);
+  color: var(--orange-color);
+}
+
+.problem-solution-note {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: #dedcd4;
+  background: rgba(255, 75, 38, 0.08);
+  border-left: 2px solid var(--orange-color);
+  padding: 8px 12px;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+  .common-problems-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .problems-grid {
+    grid-template-columns: 1fr;
+  }
+}

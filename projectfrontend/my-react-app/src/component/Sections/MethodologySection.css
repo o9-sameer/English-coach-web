@@ -1,0 +1,159 @@
+/* ==========================================================================
+   METHODOLOGY SECTION STYLES
+   ========================================================================== */
+
+.methodology-header {
+  max-width: 800px;
+  margin-bottom: 56px;
+}
+
+.methodology-intro-text {
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: #adaba5;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.pillar-card {
+  position: relative;
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.pillar-card:hover,
+.pillar-card.is-active {
+  background: rgba(24, 24, 24, 0.95);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6),
+              0 0 30px rgba(255, 75, 38, 0.06);
+}
+
+.pillar-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.pillar-num-badge {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--orange-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 75, 38, 0.1);
+  border: 1px solid rgba(255, 75, 38, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillar-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+}
+
+.pillar-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--white-color);
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.pillar-subtitle {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--orange-color);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.pillar-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #9c9a94;
+  margin-bottom: 28px;
+  flex: 1;
+}
+
+.pillar-drills-box {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+
+.drills-header {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.drills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.drills-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #d1cfc7;
+}
+
+.drill-bullet {
+  color: var(--orange-color);
+  font-weight: bold;
+}
+
+.pillar-accent-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--orange-color);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pillar-card:hover .pillar-accent-line,
+.pillar-card.is-active .pillar-accent-line {
+  width: 100%;
+}
+
+@media (max-width: 1040px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,257 @@
+/* ==========================================================================
+   INTERACTIVE TESTIMONIALS - EDITORIAL SPOTLIGHT & QUOTE SWITCHER
+   ========================================================================== */
+
+.testimonials-spotlight-section {
+  position: relative;
+  background-color: #070707;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+/* Header Row */
+.testimonials-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 56px;
+}
+
+.testimonials-controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.slide-counter {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #787670;
+}
+
+.current-num {
+  color: var(--orange-color);
+  font-weight: 800;
+}
+
+.nav-btn-pair {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.slider-nav-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--white-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slider-nav-btn:hover {
+  background-color: var(--orange-color);
+  border-color: var(--orange-color);
+  transform: scale(1.06);
+  box-shadow: 0 6px 20px rgba(255, 75, 38, 0.35);
+}
+
+/* ---------------- Main Spotlight Card ---------------- */
+.testimonial-spotlight-card {
+  position: relative;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 56px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+  transition: border-color 0.35s ease;
+}
+
+.testimonial-spotlight-card:hover {
+  border-color: rgba(255, 75, 38, 0.35);
+}
+
+/* Top Bar */
+.spotlight-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.spotlight-focus-pill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange-color);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(255, 75, 38, 0.08);
+  border: 1px solid rgba(255, 75, 38, 0.25);
+}
+
+.spotlight-metric-badge {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #f2f0eb;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Quote Body */
+.spotlight-body {
+  position: relative;
+  padding-left: 56px;
+}
+
+.giant-quote-mark {
+  position: absolute;
+  left: 0;
+  top: -24px;
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 6.5rem;
+  line-height: 1;
+  font-weight: 800;
+  color: rgba(255, 75, 38, 0.3);
+  user-select: none;
+  pointer-events: none;
+}
+
+.spotlight-quote-text {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: clamp(1.3rem, 2.4vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.42;
+  letter-spacing: -0.015em;
+  color: var(--white-color);
+  margin: 0;
+}
+
+/* Footer of Card */
+.spotlight-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.spotlight-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.author-name-lead {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.author-role-sub {
+  font-size: 0.92rem;
+  color: #adaba5;
+  font-weight: 500;
+}
+
+.author-company-sub {
+  font-size: 0.8rem;
+  color: #787670;
+  letter-spacing: 0.02em;
+}
+
+/* Dots */
+.spotlight-dots-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spotlight-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+}
+
+.spotlight-dot.is-active {
+  width: 32px;
+  border-radius: 6px;
+  background-color: var(--orange-color);
+  box-shadow: 0 0 10px rgba(255, 75, 38, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .testimonial-spotlight-card {
+    padding: 40px 36px;
+  }
+
+  .spotlight-body {
+    padding-left: 40px;
+  }
+
+  .giant-quote-mark {
+    font-size: 5rem;
+    top: -16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-spotlight-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .testimonials-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .testimonial-spotlight-card {
+    padding: 28px 20px;
+  }
+
+  .spotlight-body {
+    padding-left: 0;
+  }
+
+  .giant-quote-mark {
+    position: relative;
+    top: 0;
+    display: block;
+    margin-bottom: -20px;
+  }
+
+  .spotlight-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,157 @@
+/* ==========================================================================
+   CINEMATIC OPENING INTRO SEQUENCE STYLES
+   ========================================================================== */
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background-color: #070707;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  clip-path: inset(0% 0% 0% 0%);
+  pointer-events: auto;
+}
+
+.intro-aura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 75, 38, 0.14) 0%, rgba(255, 75, 38, 0.02) 40%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* Skip Button */
+.intro-skip-btn {
+  position: absolute;
+  top: 32px;
+  right: 36px;
+  z-index: 10;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  padding: 8px 16px;
+  color: #888;
+  font-family: inherit;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.skip-key-hint {
+  font-size: 0.68rem;
+  color: #555;
+}
+
+.intro-skip-btn:hover {
+  color: var(--white-color);
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Center Stage */
+.intro-center-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 24px;
+}
+
+/* Phase 2: Hesitation Cadence Dots */
+.intro-hesitation-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: absolute;
+}
+
+.h-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #adaba5;
+  box-shadow: 0 0 12px rgba(173, 171, 165, 0.3);
+  display: block;
+}
+
+/* Phase 3: Acoustic Waveform */
+.intro-waveform-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 52px;
+  opacity: 0;
+  position: absolute;
+}
+
+.wave-bar {
+  width: 4px;
+  border-radius: 4px;
+  background-color: var(--orange-color);
+  box-shadow: 0 0 14px rgba(255, 75, 38, 0.4);
+  display: block;
+}
+
+.bar-1 { height: 18px; }
+.bar-2 { height: 38px; }
+.bar-3 { height: 48px; }
+.bar-4 { height: 32px; }
+.bar-5 { height: 16px; }
+
+/* Phase 4: Typographic Statement */
+.intro-statement-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statement-line-mask {
+  overflow: hidden;
+  display: block;
+  padding-bottom: 6px;
+}
+
+.statement-line {
+  display: inline-block;
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: clamp(3.2rem, 8.8vw, 6.4rem);
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  will-change: transform, opacity;
+}
+
+.statement-accent {
+  color: var(--orange-color);
+}
+
+.statement-dot {
+  color: #fff;
+  font-family: serif;
+}
+
+@media (max-width: 600px) {
+  .intro-skip-btn {
+    top: 20px;
+    right: 20px;
+    padding: 6px 12px;
+  }
+}

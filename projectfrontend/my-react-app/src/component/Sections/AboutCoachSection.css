@@ -1,0 +1,329 @@
+/* ==========================================================================
+   ABOUT & COACH SECTION - EDITORIAL BIOGRAPHY & RHETORICAL PHILOSOPHY
+   ========================================================================== */
+
+.about-coach-section {
+  position: relative;
+  background-color: #070707;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.section-anchor {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.about-coach-header {
+  margin-bottom: 64px;
+}
+
+.about-coach-headline {
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+/* Grid Layout */
+.about-coach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 72px;
+  align-items: flex-start;
+}
+
+/* ---------------- Visual Column ---------------- */
+.about-visual-col {
+  position: relative;
+}
+
+.about-image-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: visible;
+}
+
+.about-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: #121212;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85);
+}
+
+.about-coach-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: contrast(106%) brightness(95%);
+  will-change: transform;
+}
+
+.about-image-overlay-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(7, 7, 7, 0.8) 100%);
+  pointer-events: none;
+}
+
+/* Floating credential badge */
+.about-floating-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.badge-live-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--orange-color);
+  box-shadow: 0 0 10px var(--orange-color);
+  flex-shrink: 0;
+}
+
+.badge-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.badge-lead {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--white-color);
+  letter-spacing: 0.02em;
+}
+
+.badge-detail {
+  font-size: 0.76rem;
+  color: #adaba5;
+  font-weight: 500;
+}
+
+/* Metrics Pill Row below portrait */
+.about-metrics-pill-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 24px;
+  padding: 16px 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-micro-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.metric-figure {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--white-color);
+  line-height: 1;
+}
+
+.metric-caption {
+  font-size: 0.74rem;
+  color: #adaba5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.metric-pill-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ---------------- Bio Column ---------------- */
+.about-bio-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-lead-quote {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  line-height: 1.45;
+  font-weight: 600;
+  color: #f2f0eb;
+  border-left: 2px solid var(--orange-color);
+  padding-left: 20px;
+  margin: 0;
+}
+
+.about-body-p {
+  font-size: 1.02rem;
+  line-height: 1.72;
+  color: #c4c2ba;
+  margin: 0;
+}
+
+/* Hallmark Tenets */
+.about-tenets-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.tenet-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tenet-row:hover {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(255, 75, 38, 0.35);
+  transform: translateX(6px);
+}
+
+.tenet-index {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--orange-color);
+  letter-spacing: 0.08em;
+  padding-top: 2px;
+}
+
+.tenet-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tenet-title {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.tenet-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #adaba5;
+  margin: 0;
+}
+
+/* Signature Footer */
+.about-signature-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 8px;
+}
+
+.signature-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.signature-name {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--white-color);
+  letter-spacing: -0.01em;
+}
+
+.signature-sub {
+  font-size: 0.8rem;
+  color: #adaba5;
+}
+
+.signature-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--orange-color);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 75, 38, 0.35);
+  background: rgba(255, 75, 38, 0.06);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-coach-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-image-frame {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .about-floating-badge {
+    max-width: 480px;
+    margin: 0 auto;
+    left: 20px;
+    right: 20px;
+  }
+
+  .about-metrics-pill-row {
+    max-width: 520px;
+    margin: 24px auto 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-coach-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .tenet-row {
+    padding: 14px 16px;
+    gap: 14px;
+  }
+
+  .about-signature-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}

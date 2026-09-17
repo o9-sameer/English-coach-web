@@ -1,0 +1,125 @@
+/* CSS REBOOT */
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+}
+
+body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        color: #fff;
+}
+
+:root {
+        --nav-bg: #adaba5;
+        --border-radius: 25px;
+        --orange-color: #ff4b26;
+        --black-color: #000;
+        --white-color: #fff;
+}
+
+/* START STYING */
+
+.navbar {
+        padding: 30px;
+}
+
+.navbar nav {
+        height: 50px;
+        background-color: var(--nav-bg);
+        display: flex;
+        border-radius: var(--border-radius);
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 20px;
+}
+
+.logo-wrapper {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.logo-wrapper .logo {
+        font-size: large;
+        font-weight: 500;
+}
+
+.logo-wrapper .logo img {
+        width: 100%;
+        height: 100%;
+        color: transparent;
+        filter: brightness(0)
+}
+
+.nav-btns-wrapper {
+        display: flex;
+        gap: 10px;
+}
+.nav-btns-wrapper .btn {
+        border-radius: var(--border-radius);
+        padding: 7px;
+}
+
+.btn {
+        font-size: 1rem;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        gap: 2px;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--border-radius);
+        transition: 0.3s;
+        padding: 5px;
+}
+
+.nav-btns-wrapper .btn:first-child {
+        color: var(--orange-color);
+        color: var(--black-color);
+}
+
+.btn i {
+        font-size: 10px;
+        transition: 0.5s;
+        behavior: smooth;
+}
+
+.nav-btns-wrapper .btn:hover {
+        background-color: var(--orange-color);
+}
+
+.nav-btns-wrapper .btn:hover i {
+        transform: rotateX(180deg);
+}
+
+
+/* SEARCH BTN*/
+.search-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white-color);
+        background-color: var(--black-color);
+        gap: 5px;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 0.9rem;
+}
+
+.search-arrow {
+        background-color: #373737;
+        border-radius: 50%;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+}

@@ -1,0 +1,257 @@
+/* ==========================================================================
+   CINEMATIC FOOTER - EDITORIAL CREATIVE AGENCY AESTHETIC
+   ========================================================================== */
+
+.cinematic-footer {
+  position: relative;
+  background-color: #070707;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 120px 48px 48px 48px;
+  color: var(--white-color);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
+}
+
+.footer-ambient-aura {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 75, 38, 0.08) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.footer-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Monumental English Coach Typography */
+.footer-hero-headline {
+  margin-bottom: 84px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+}
+
+.footer-title-mask {
+  overflow: hidden;
+  display: block;
+}
+
+.footer-big-line {
+  display: inline-block;
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: clamp(3.2rem, 9.5vw, 9.4rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  will-change: transform, opacity;
+}
+
+.footer-accent-text {
+  color: var(--orange-color);
+}
+
+/* 4-Column Navigation Grid */
+.footer-columns-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 1fr 1.1fr;
+  gap: 48px;
+  padding-bottom: 72px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  margin-bottom: 40px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange-color);
+  margin-bottom: 24px;
+  display: block;
+}
+
+/* Brand Column */
+.brand-col .footer-brand-name {
+  font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--white-color);
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #c4c2ba;
+  margin-bottom: 16px;
+}
+
+.footer-brand-bio {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #888;
+  max-width: 320px;
+  margin-bottom: 24px;
+}
+
+.footer-locale-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.74rem;
+  color: #adaba5;
+  width: fit-content;
+}
+
+.locale-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--orange-color);
+}
+
+/* Link Lists */
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #adaba5;
+  text-decoration: none;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  padding: 2px 0;
+}
+
+.footer-link-arrow {
+  font-size: 0.82rem;
+  color: #555;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-link:hover {
+  color: var(--white-color);
+  transform: translateX(4px);
+}
+
+.footer-link:hover .footer-link-arrow {
+  color: var(--orange-color);
+  transform: translate(3px, -3px);
+}
+
+/* Bottom Row */
+.footer-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: #777;
+}
+
+.footer-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-motto {
+  font-style: italic;
+  color: #999;
+}
+
+.footer-back-to-top-btn {
+  background: transparent;
+  border: none;
+  color: #adaba5;
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+}
+
+.footer-back-to-top-btn:hover {
+  color: var(--white-color);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.top-arrow {
+  transition: transform 0.25s ease;
+}
+
+.footer-back-to-top-btn:hover .top-arrow {
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .footer-columns-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cinematic-footer {
+    padding: 80px 24px 36px 24px;
+  }
+
+  .footer-hero-headline {
+    margin-bottom: 48px;
+  }
+
+  .footer-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-bottom: 48px;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .footer-bottom-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}

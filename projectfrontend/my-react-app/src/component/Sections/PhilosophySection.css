@@ -1,0 +1,104 @@
+/* ==========================================================================
+   PHILOSOPHY SECTION STYLES
+   ========================================================================== */
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 64px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.philosophy-title {
+  margin-bottom: 32px;
+}
+
+.philosophy-lead-paragraph {
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  line-height: 1.6;
+  color: #e2e0d8;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.philosophy-sub-paragraph {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #9c9a94;
+  margin-bottom: 36px;
+}
+
+.philosophy-pillars-preview {
+  display: flex;
+  gap: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.preview-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.preview-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--orange-color);
+  letter-spacing: 0.05em;
+}
+
+.preview-text {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.philosophy-frame {
+  aspect-ratio: 4 / 4.8;
+  width: 100%;
+}
+
+.philosophy-floating-quote {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  right: 20px;
+  background: rgba(14, 14, 14, 0.84);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: 18px 22px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+}
+
+.philosophy-floating-quote .quote-mark {
+  font-family: serif;
+  font-size: 2.2rem;
+  line-height: 0.8;
+  color: var(--orange-color);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.philosophy-floating-quote p {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: #e5e5e5;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .philosophy-pillars-preview {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
